@@ -1,0 +1,133 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+
+    nav {
+      background: darkgrey;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      left: 0;
+
+
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 2.5vw 0.5vw;
+        font-size: 2.5vw;
+        font-weight: 700;
+        margin: 0 1vw;
+        transition: background 1s linear 0.1s;
+
+        &:hover {
+          background: darken(grey, 10%);
+        }
+      }
+    }
+
+
+    article {
+      background-image: url('../images/planesky.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      height: 40vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      h1 {
+        color: white;
+        font-size: 5vw;
+      }
+    }
+
+
+    footer {
+      height: 50vw;
+      background-image: url('../images/hamburg.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      h2 {
+        color: white;
+        font-size: 4vw;
+      }
+
+      p {
+        width: 80%;
+        color: white;
+        font-size: 2vw;
+        background: rgba(0, 0, 0,0.6);
+      }
+
+      form {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(4, 1fr);
+        grid-gap: 1vw 2vw;
+        grid-template-areas:
+                'username username textarea textarea'
+                'password password textarea textarea'
+                'email email submit empty';
+
+
+        input[type="text"] {
+          grid-area: username;
+          font-size: 1.5vw;
+          padding: 1vw;
+        }
+
+        input[type="password"] {
+          grid-area: password;
+          font-size: 1.5vw;
+          padding: 1vw;
+        }
+
+        input[type="email"] {
+          grid-area: email;
+          font-size: 1.5vw;
+          padding: 1vw;
+        }
+
+        textarea {
+          grid-area: textarea;
+          font-size: 1.5vw;
+          padding: 1vw;
+        }
+
+        button {
+          grid-area: submit;
+          font-size: 1.5vw;
+          padding: 1vw;
+          background: lime;
+          color: white;
+          border: none;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        div {
+          grid-area: empty;
+        }
+      }
+    }
+
+
+
+
+
+}
