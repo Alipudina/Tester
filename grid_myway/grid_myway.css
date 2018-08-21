@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #B8B044;
+}
+
+body section {
+  background: grey;
+  width: 90%;
+  margin: 5vw auto;
+  display: grid;
+  grid-template: repeat(5, 8vw)/2fr 2fr 3fr 2fr 2fr 3fr;
+  grid-gap: 0.5vw 1vw;
+  grid-template-areas: 'one two three three four four' 'one two three three four four' 'one two five six six seven' 'eight eight five six six seven' 'eight eight five six six seven';
+}
+
+body section div:nth-of-type(1) {
+  background-image: url("image-folder/alps.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: one;
+}
+
+body section div:nth-of-type(2) {
+  background-image: url("image-folder/brooklyn.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: two;
+}
+
+body section div:nth-of-type(3) {
+  background-image: url("image-folder/canyon.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: three;
+}
+
+body section div:nth-of-type(4) {
+  background-image: url("image-folder/colorado.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: four;
+}
+
+body section div:nth-of-type(5) {
+  background-image: url("image-folder/forest.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: five;
+}
+
+body section div:nth-of-type(6) {
+  background-image: url("image-folder/lifeguard.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: six;
+}
+
+body section div:nth-of-type(7) {
+  background-image: url("image-folder/lights.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: seven;
+}
+
+body section div:nth-of-type(8) {
+  background-image: url("image-folder/sifnos.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-area: eight;
+}

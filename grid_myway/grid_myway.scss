@@ -1,0 +1,37 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #B8B044;
+
+
+  section {
+    background: grey;
+    width: 90%;
+    margin: 5vw auto;
+    display: grid;
+    grid-template: repeat(5, 8vw) / 2fr 2fr 3fr 2fr 2fr 3fr;
+    grid-gap: 0.5vw 1vw;
+    grid-template-areas:
+            'one two three three four four'
+            'one two three three four four'
+            'one two five six six seven'
+            'eight eight five six six seven'
+            'eight eight five six six seven';
+
+
+    @each $num, $img, $area in (1, alps, one), (2, brooklyn, two),
+        (3, canyon, three), (4, colorado, four), (5, forest, five),
+        (6, lifeguard, six), (7, lights, seven), (8, sifnos, eight) {
+          div:nth-of-type(#{$num}) {
+            background-image: url('image-folder/#{$img}.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            grid-area: $area;
+          }
+        }
+
+  }
+
+}
